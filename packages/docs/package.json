@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "storybook build",
     "dev": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "storybook": "storybook dev -p 6006"
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +26,9 @@
     "vite": "^4.3.8"
   },
   "dependencies": {
+    "@kdesign-ui/react":"*",
+    "@kdesign-ui/tokens":"*",
+    "@kdesign-ui/eslint-config":"*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
