@@ -1,3 +1,3 @@
-import {colors} from '@kdesign-ui/tokens'
+import { colors } from '@kdesign-ui/tokens'
 
 console.log(colors)
