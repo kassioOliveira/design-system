@@ -26,9 +26,11 @@
     "vite": "^4.3.8"
   },
   "dependencies": {
-    "@kdesign-ui/react":"*",
-    "@kdesign-ui/tokens":"*",
-    "@kdesign-ui/eslint-config":"*",
+    "@kdesign-ui/eslint-config": "*",
+    "@kdesign-ui/ts-config": "*",
+    "@kdesign-ui/react": "*",
+    "@kdesign-ui/tokens": "*",
+    "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
