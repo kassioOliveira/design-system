@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "storybook build",
     "dev": "storybook dev -p 6006",
-    "deploy-storybook":"storybook:build && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true"
+    "deploy-storybook":"npm build && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true"
   },
   "keywords": [],
   "author": "",
