@@ -1,0 +1,4 @@
+import{j as s}from"./jsx-runtime-5fc188ad.js";import{c as a}from"./index-eff081a7.js";import"./index-c0290abd.js";import"./_commonjsHelpers-725317a4.js";import"./index-868dec5b.js";import"./index.module-8d7fe8b5.js";import"./extends-98964cd2.js";const g={title:"Alert/Toast",component:a,argTypes:{close:{action:"click"}}},r=i=>s.jsx(a,{description:"Quarta-feira, 23 de Outubro ás 16h",title:"Agendamento realizado"});var t,o,e;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`args => {
+  return <Toast description='Quarta-feira, 23 de Outubro ás 16h' title='Agendamento realizado' />;
+}`,...(e=(o=r.parameters)==null?void 0:o.docs)==null?void 0:e.source}}};const f=["Primary"];export{r as Primary,f as __namedExportsOrder,g as default};
+//# sourceMappingURL=Toast.stories-3add971b.js.map
