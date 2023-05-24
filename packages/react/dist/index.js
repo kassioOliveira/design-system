@@ -68,6 +68,7 @@ __export(src_exports, {
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
+  Toast: () => Toast,
   Tooltip: () => Tooltip,
   config: () => config,
   createTheme: () => createTheme,
@@ -563,6 +564,54 @@ var Tooltip = styled("div", {
   textAlign: "center",
   fontWeight: "bold"
 });
+
+// src/components/Toast/index.tsx
+var import_react3 = require("react");
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  backgroundColor: "$gray800",
+  border: "1px solid",
+  borderColor: "$gray500",
+  borderRadius: 6,
+  padding: "$4",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "left",
+  justifyContent: "space-between",
+  gap: "$2",
+  width: "$80",
+  position: "relative",
+  svg: {
+    position: "absolute",
+    right: "$4",
+    color: "$gray200",
+    cursor: "pointer"
+  },
+  strong: {
+    color: "$white",
+    fontSize: "$2xl"
+  },
+  span: {
+    color: "$gray200",
+    fontSize: "$sm"
+  }
+});
+
+// src/components/Toast/index.tsx
+var import_phosphor_react3 = require("phosphor-react");
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function Toast({ title, description, startClosed = false }) {
+  const [isOnpen, setIsOpen] = (0, import_react3.useState)(startClosed);
+  function close() {
+    setIsOpen((state) => !state);
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastContainer, { style: { display: !isOnpen ? "flex" : "none" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react3.X, { size: 24, onClick: close }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("strong", { children: title }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { children: description })
+  ] });
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -574,6 +623,7 @@ var Tooltip = styled("div", {
   Text,
   TextArea,
   TextInput,
+  Toast,
   Tooltip,
   config,
   createTheme,

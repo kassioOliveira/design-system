@@ -513,6 +513,54 @@ var Tooltip = styled("div", {
   textAlign: "center",
   fontWeight: "bold"
 });
+
+// src/components/Toast/index.tsx
+import { useState } from "react";
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  backgroundColor: "$gray800",
+  border: "1px solid",
+  borderColor: "$gray500",
+  borderRadius: 6,
+  padding: "$4",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "left",
+  justifyContent: "space-between",
+  gap: "$2",
+  width: "$80",
+  position: "relative",
+  svg: {
+    position: "absolute",
+    right: "$4",
+    color: "$gray200",
+    cursor: "pointer"
+  },
+  strong: {
+    color: "$white",
+    fontSize: "$2xl"
+  },
+  span: {
+    color: "$gray200",
+    fontSize: "$sm"
+  }
+});
+
+// src/components/Toast/index.tsx
+import { X } from "phosphor-react";
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+function Toast({ title, description, startClosed = false }) {
+  const [isOnpen, setIsOpen] = useState(startClosed);
+  function close() {
+    setIsOpen((state) => !state);
+  }
+  return /* @__PURE__ */ jsxs4(ToastContainer, { style: { display: !isOnpen ? "flex" : "none" }, children: [
+    /* @__PURE__ */ jsx5(X, { size: 24, onClick: close }),
+    /* @__PURE__ */ jsx5("strong", { children: title }),
+    /* @__PURE__ */ jsx5("span", { children: description })
+  ] });
+}
 export {
   Avatar2 as Avatar,
   Box,
@@ -523,6 +571,7 @@ export {
   Text,
   TextArea,
   TextInput,
+  Toast,
   Tooltip,
   config,
   createTheme,

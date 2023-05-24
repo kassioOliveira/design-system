@@ -4,7 +4,7 @@ import {Tooltip,TooltipProps} from '@kdesign-ui/react/src'
 
 
 export default {
-    title:'Form/Tooltip',
+    title:'Alert/Tooltip',
     component: Tooltip,
     
     args: {
